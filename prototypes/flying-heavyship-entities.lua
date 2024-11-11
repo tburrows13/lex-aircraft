@@ -40,11 +40,10 @@ local flying_heavyship = {
           leg = "lex-aircraft-leg",
           mount_position = {0, -1},
           ground_position = {0, -1},
-          blocking_legs = {1},
+          walking_group = 1,
           leg_hit_the_ground_trigger = nil
         }
       },
-      military_target = "spidertron-military-target"
     },
     height = 2,
     torso_rotation_speed = 0.005,
