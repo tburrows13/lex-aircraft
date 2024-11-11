@@ -54,22 +54,21 @@ end
 
 -- SE
 if mods["space-exploration"] then
-  local collision_mask_util_extended = require("__space-exploration__/collision-mask-util-extended/data/collision-mask-util-extended")
+  local collision_mask_util = require("__core__/lualib/collision-mask-util")
   local data_util = require("__space-exploration__/data_util")
-  local space_collision_layer = collision_mask_util_extended.get_make_named_collision_mask("space-tile")
 
   local names = {"lex-flying-cargo", "lex-flying-gunship", "lex-flying-heavyship"}
 
   for _, name in pairs(names) do
       local prototype = data.raw["spider-vehicle"][name]
-      prototype.collision_mask = collision_mask_util_extended.get_mask(prototype)
-      collision_mask_util_extended.add_layer(prototype.collision_mask, space_collision_layer)
+      prototype.collision_mask = collision_mask_util.get_mask(prototype)
+      prototype.collision_mask.layers.space_tile = true
 
       for _, leg_specification in pairs(prototype.spider_engine.legs) do
           local leg_prototype = data.raw["spider-leg"][leg_specification.leg]
-          leg_prototype.collision_mask = collision_mask_util_extended.get_mask(leg_prototype)
-          collision_mask_util_extended.add_layer(leg_prototype.collision_mask, space_collision_layer)
-          collision_mask_util_extended.add_layer(leg_prototype.collision_mask, "colliding-with-tiles-only")
+          leg_prototype.collision_mask = collision_mask_util.get_mask(leg_prototype)
+          leg_prototype.collision_mask.layers.space_tile = true
+          leg_prototype.collision_mask.colliding_with_tiles_only = true
       end
 
       data_util.collision_description(prototype)  -- Adds "Cannot be placed on..." to tooltip
