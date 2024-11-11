@@ -26,9 +26,11 @@ local flying_gunship = {
       Aircraft:addResist("acid",     60, 20),
     },
     collision_mask = {
-      "ground-tile",
-      "object-layer",
-      "train-layer"
+      layers = {
+        ground_tile = true,
+        object = true,
+        train = true,
+      }
     },
     inventory_size = inventorySize,
     guns = {"lex-machine-gun","lex-rocket-launcher"},
@@ -59,7 +61,8 @@ local flying_gunship = {
     chain_shooting_cooldown_modifier = 0.5,
     effectivity = 1,
     braking_power = "350kW",
-    burner = {
+    energy_source = {
+      type = "burner",
       fuel_inventory_size = 1,
       smoke =
       {

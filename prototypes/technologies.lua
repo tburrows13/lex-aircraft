@@ -70,7 +70,7 @@ data:extend({
     name = "lex-flying-heavyship-ships",
     icon = TECHPATH .. "flying_heavyship.png",
     icon_size = 256,
-    effects = { unlock("lex-flying-heavyship"), unlock("spidertron-remote") },
+    effects = { unlock("lex-flying-heavyship") },
     prerequisites = {"lex-flying-gunship-ships", "lex-flying-cargo-ships" },
     unit = {
       count = 2500,

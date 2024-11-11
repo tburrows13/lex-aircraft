@@ -2,90 +2,47 @@ data:extend({
  {
     type = "recipe",
     name = "lex-flying-gunship",
-    normal = {
-	    enabled = false,
-	    energy_required = 10,
-	    ingredients = {
-        {"electric-engine-unit", 64},
-        {"steel-plate", 200},
-        {"iron-plate", 400},
-        {"electronic-circuit", 40},
-        {"submachine-gun", 2},
-        {"rocket-launcher", 2}
-      },
-	    result = "lex-flying-gunship"
-	  },
-    expensive = {
-	    enabled = false,
-	    energy_required = 20,
-	    ingredients = {
-	      {"electric-engine-unit", 128},
-	      {"steel-plate", 400},
-	      {"iron-plate", 800},
-	      {"electronic-circuit", 80},
-	      {"submachine-gun", 10},
-	      {"rocket-launcher", 10},
-	    },
-	    result = "lex-flying-gunship"
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+      {type="item", name="electric-engine-unit", amount=64},
+      {type="item", name="steel-plate", amount=200},
+      {type="item", name="iron-plate", amount=400},
+      {type="item", name="electronic-circuit",amount=40},
+      {type="item", name="submachine-gun", amount=2},
+      {type="item", name="rocket-launcher", amount=2}
     },
+    results = {{type="item", name="lex-flying-gunship", amount=1}}
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  {
     type = "recipe",
     name = "lex-flying-cargo",
-    normal = {
-	    enabled = false,
-	    energy_required = 5,
-	    ingredients = {
-	      {"electric-engine-unit", 128},
-	      {"steel-plate", 500},
-	      {"iron-plate", 500},
-	      {"advanced-circuit", 20},
-	    },
-	    result = "lex-flying-cargo"
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+      {type="item", name="electric-engine-unit", amount=128},
+      {type="item", name="steel-plate", amount=500},
+      {type="item", name="iron-plate", amount=500},
+      {type="item", name="advanced-circuit", amount=20},
     },
-    expensive = {
-	    enabled = false,
-	    energy_required = 10,
-	    ingredients = {
-        {"electric-engine-unit", 256},
-        {"steel-plate", 1000},
-        {"iron-plate", 1000},
-        {"advanced-circuit", 40},
-      },
-      result = "lex-flying-cargo"
-    },
+    results = {{type="item", name="lex-flying-cargo", amount=1}}
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   {
     type = "recipe",
     name = "lex-flying-heavyship",
-    normal = {
-	    enabled = false,
-	    energy_required = 20,
-	    ingredients = {
-        {"electric-engine-unit",150},
-        {"steel-plate", 1000},
-        {"advanced-circuit", 80},
-        {"processing-unit",  40},
-        {"low-density-structure", 200},
-        {"tank", 2},
-        {"rocket-launcher", 10},
-      },
-      result = "lex-flying-heavyship",
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+      {type="item", name="electric-engine-unit",amount=150},
+      {type="item", name="steel-plate", amount=1000},
+      {type="item", name="advanced-circuit", amount=80},
+      {type="item", name="processing-unit",  amount=40},
+      {type="item", name="low-density-structure", amount=200},
+      {type="item", name="tank", amount=2},
+      {type="item", name="rocket-launcher", amount=10},
     },
-    expensive = {
-	    enabled = false,
-	    energy_required = 40,
-	    ingredients = {
-        {"electric-engine-unit", 300},
-        {"steel-plate", 4000},
-        {"advanced-circuit", 160},
-        {"processing-unit", 80},
-        {"submachine-gun", 30},
-        {"rocket-launcher", 30},
-      },
-      result = "lex-flying-heavyship",
-    },
+    results = {{type="item", name="lex-flying-heavyship", amount=1}}
   },
 })

@@ -23,7 +23,7 @@ if mods["Krastorio2"] and settings.startup["kr-more-realistic-weapon"].value the
       name = "lex-advanced-machine-gun",
       icon = "__Krastorio2Assets__/icons/guns/advanced-tank-machine-gun.png",
       icon_size = 64,
-      flags = { "hidden" },
+      hidden = true,
       subgroup = "gun",
       order = "z[tank]-a[advanced-machine-gun]",
       attack_parameters = {

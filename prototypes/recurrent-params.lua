@@ -29,30 +29,31 @@ function _Aircrafts:addLeg()
     --collision_mask = {},
     selection_box = { { -0, -0 }, { 0, 0 } },
     icon = "__base__/graphics/icons/spidertron.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     walking_sound_volume_modifier = 0,
     target_position_randomisation_distance = 0,
     minimal_step_size = 0,
     working_sound = nil,
-    part_length = 1,
     initial_movement_speed = 1,
     movement_acceleration = 1,
+    knee_height = 2.5,
+    knee_distance_factor = 0.4,
     max_health = 100,
+    base_position_selection_distance = 1,
     movement_based_position_selection_distance = 1,
     selectable_in_game = false,
-    graphics_set = create_spidertron_leg_graphics_set(0, 1),
+    --graphics_set = create_spidertron_leg_graphics_set(0, 1),
     acceleration_per_energy = 0.80,
   }
 end
 
 function _Aircrafts:addCommonAnimLines(anim)
   for key, layer in pairs(anim.layers) do
-    layer.width, layer.height = 250, 250
-    layer.hr_version.width, layer.hr_version.height = HR_VERSION, HR_VERSION
-    layer.frame_count, layer.hr_version.frame_count = 1, 1
-    layer.direction_count, layer.hr_version.direction_count = 128, 128
-    layer.line_length, layer.hr_version.line_length = 8, 8
-    layer.max_advance, layer.hr_version.max_advance = 1, 1
+    layer.width, layer.height = HR_VERSION, HR_VERSION
+    layer.frame_count = 1
+    layer.direction_count = 128
+    layer.line_length = 8
+    layer.max_advance = 1
   end
   return anim
 end
@@ -63,69 +64,35 @@ function _Aircrafts:airplaneAnimation(name, scale)
     {
       stripes = {
         {
-          filename = ENTITYPATH .. name .. "/" .. name .. "_1-64.png",
+          filename = ENTITYPATH .. name .. "/hr-" .. name .. "_1-64.png",
           width_in_frames = 8,
           height_in_frames = 8,
         },
         {
-          filename = ENTITYPATH .. name .. "/" .. name .. "_65-128.png",
+          filename = ENTITYPATH .. name .. "/hr-" .. name .. "_65-128.png",
           width_in_frames = 8,
           height_in_frames = 8,
         },
       },
       shift = { 0, 0 },
-      scale = SPRITE_MULTIPLIER * scale,
-      hr_version = {
-        stripes = {
-          {
-            filename = ENTITYPATH .. name .. "/hr-" .. name .. "_1-64.png",
-            width_in_frames = 8,
-            height_in_frames = 8,
-          },
-          {
-            filename = ENTITYPATH .. name .. "/hr-" .. name .. "_65-128.png",
-            width_in_frames = 8,
-            height_in_frames = 8,
-          },
-        },
-        shift = { 0, 0 },
-        scale = SPRITE_MULTIPLIER * scale * 0.5,
-      }
+      scale = SPRITE_MULTIPLIER * scale * 0.5,
     },
-
     {
       stripes = {
         {
-          filename = ENTITYPATH .. name .. "/" .. name .. "_1-64_mask.png",
+          filename = ENTITYPATH .. name .. "/hr-" .. name .. "_1-64_mask.png",
           width_in_frames = 8,
           height_in_frames = 8,
         },
         {
-          filename = ENTITYPATH .. name .. "/" .. name .. "_65-128_mask.png",
+          filename = ENTITYPATH .. name .. "/hr-" .. name .. "_65-128_mask.png",
           width_in_frames = 8,
           height_in_frames = 8,
         },
       },
       apply_runtime_tint = true,
       shift = { 0, 0 },
-      scale = SPRITE_MULTIPLIER * scale,
-      hr_version = {
-        stripes = {
-          {
-            filename = ENTITYPATH .. name .. "/hr-" .. name .. "_1-64_mask.png",
-            width_in_frames = 8,
-            height_in_frames = 8,
-          },
-          {
-            filename = ENTITYPATH .. name .. "/hr-" .. name .. "_65-128_mask.png",
-            width_in_frames = 8,
-            height_in_frames = 8,
-          },
-        },
-        apply_runtime_tint = true,
-        shift = { 0, 0 },
-        scale = SPRITE_MULTIPLIER * scale * 0.5,
-      }
+      scale = SPRITE_MULTIPLIER * scale * 0.5,
     },
 
 
@@ -142,36 +109,19 @@ function _Aircrafts:airshipShadowAnimation(name, scale)
     {
       stripes = {
         {
-          filename = ENTITYPATH .. name .. "/" .. name .. "_1-64_shadow.png",
+          filename = ENTITYPATH .. name .. "/hr-" .. name .. "_1-64_shadow.png",
           width_in_frames = 8,
           height_in_frames = 8,
         },
         {
-          filename = ENTITYPATH .. name .. "/" .. name .. "_65-128_shadow.png",
+          filename = ENTITYPATH .. name .. "/hr-" .. name .. "_65-128_shadow.png",
           width_in_frames = 8,
           height_in_frames = 8,
         },
       },
       shift = { 2, 2 },
       draw_as_shadow = true,
-      scale = SPRITE_MULTIPLIER * scale,
-      hr_version = {
-        stripes = {
-          {
-            filename = ENTITYPATH .. name .. "/hr-" .. name .. "_1-64_shadow.png",
-            width_in_frames = 8,
-            height_in_frames = 8,
-          },
-          {
-            filename = ENTITYPATH .. name .. "/hr-" .. name .. "_65-128_shadow.png",
-            width_in_frames = 8,
-            height_in_frames = 8,
-          },
-        },
-        shift = { 2, 2 },
-        draw_as_shadow = true,
-        scale = SPRITE_MULTIPLIER * scale * 0.5,
-      }
+      scale = SPRITE_MULTIPLIER * scale * 0.5,
     }
   }
   self:addCommonAnimLines(anim)
@@ -182,14 +132,9 @@ function _Aircrafts:airplaneLightAnimation(name)
   local anim = {}
   anim.layers = {
     {
-      filename = ENTITYPATH .. name .. "/" .. name .. "_-light.png",
+      filename = ENTITYPATH .. name .. "/hr-" .. name .. "_-light.png",
       shift = util.by_pixel(9, -10),
       draw_as_light = true,
-      hr_version = {
-        filename = ENTITYPATH .. name .. "/hr-" .. name .. "_-light.png",
-        shift = util.by_pixel(9, -10),
-        draw_as_light = true,
-      }
     }
   }
   self:addCommonAnimLines(anim)
@@ -249,9 +194,7 @@ function _Aircrafts:addRecurrentParams(entitie)
   entitie.dying_explosion = "medium-explosion"
   entitie.terrain_friction_modifier = 0
   entitie.collision_box = { { -1.5, -1.5 }, { 1.5, 1.5 } }
-  entitie.collision_mask = {
-
-  }
+  entitie.collision_mask = {layers = {}}
   entitie.selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } }
   entitie.selection_priority = 60
   entitie.graphics_set.render_layer = "air-object"
@@ -259,8 +202,6 @@ function _Aircrafts:addRecurrentParams(entitie)
   entitie.graphics_set.base_render_layer = "air-object"
   entitie.sound_no_fuel = { { filename = "__base__/sound/fight/tank-no-fuel-1.ogg", volume = 0.6 } }
   entitie.vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 }
-  entitie.sound_minimum_speed = 0.19
-  entitie.sound_scaling_ratio = 0.06
   entitie.open_sound = { filename = "__base__/sound/car-door-open.ogg", volume = 0.7 }
   entitie.close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 }
   entitie.mined_sound = { filename = "__core__/sound/deconstruct-large.ogg", volume = 0.8 }

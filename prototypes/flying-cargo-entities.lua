@@ -54,14 +54,14 @@ local flying_cargo = {
     chain_shooting_cooldown_modifier = 0.5,
     effectivity = 1,
     braking_power = "1kW",
-    burner = {
+    energy_source = {
+      type = "burner",
       --fuel_category = "fusion-fuel",
       --fuel_category = "burnable-fluid-fuel",
       --fuel_category = "antimatter-fuel",
       --fuel_category = "nuclear",
       --fuel_category = "chemical",
       --fuel_category = "vehicle-fuel",
-
       fuel_inventory_size = 4,
       smoke =
       {

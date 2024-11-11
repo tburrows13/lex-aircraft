@@ -26,7 +26,7 @@ if mods["SchallTransportGroup"] then
       order = "d-4"
     }
   })
-  
+
   subgroup_aircraft = "aircrafts"
 end
 
@@ -71,7 +71,7 @@ data:extend({
     name = "lex-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
     icon_size = 64,
-    flags = {"hidden"},
+    hidden = true,
     subgroup = "gun",
     order = "a[basic-clips]-c[lex-machine-gun]",
     attack_parameters =
@@ -103,7 +103,7 @@ data:extend({
     name = "lex-rocket-launcher",
     icon = "__base__/graphics/icons/rocket-launcher.png",
     icon_size = 64,
-    flags = {"hidden"},
+    hidden = true,
     subgroup = "gun",
     order = "e[lex-rocket-launcher]",
     attack_parameters =
@@ -125,7 +125,7 @@ data:extend({
     name = "lex-cannon",
     icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
-    flags = {"hidden"},
+    hidden = true,
     subgroup = "gun",
     order = "z[tank]-a[lex-cannon]",
     attack_parameters =
@@ -146,7 +146,7 @@ data:extend({
     name = "lex-medium-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
     icon_size = 64,
-    flags = {"hidden"},
+    hidden = true,
     subgroup = "gun",
     order = "a[basic-clips]-c[lex-medium-machine-gun]",
     attack_parameters = {
@@ -176,7 +176,7 @@ data:extend({
     name = "lex-medium-rocket-launcher",
     icon = "__base__/graphics/icons/rocket-launcher.png",
     icon_size = 64,
-    flags = {"hidden"},
+    hidden = true,
     subgroup = "gun",
     order = "e[lex-medium-rocket-launcher]",
     attack_parameters = {

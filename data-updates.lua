@@ -1,9 +1,9 @@
 -- K2
 if mods["Krastorio2"] then
   require("prototypes.k2items")
-  data.raw["spider-vehicle"]["lex-flying-cargo"].burner.fuel_categories = { "vehicle-fuel" }
-  data.raw["spider-vehicle"]["lex-flying-gunship"].burner.fuel_categories = { "vehicle-fuel" }
-  data.raw["spider-vehicle"]["lex-flying-heavyship"].burner.fuel_categories = { "vehicle-fuel" }
+  data.raw["spider-vehicle"]["lex-flying-cargo"].energy_source.fuel_categories = { "vehicle-fuel" }
+  data.raw["spider-vehicle"]["lex-flying-gunship"].energy_source.fuel_categories = { "vehicle-fuel" }
+  data.raw["spider-vehicle"]["lex-flying-heavyship"].energy_source.fuel_categories = { "vehicle-fuel" }
   data.raw["equipment-grid"]["lex-flying-cargo-grid"].equipment_categories = {
     "universal-equipment",
     "robot-interaction-equipment",

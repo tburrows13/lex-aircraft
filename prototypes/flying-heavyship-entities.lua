@@ -54,7 +54,8 @@ local flying_heavyship = {
     chain_shooting_cooldown_modifier = 0.5,
     effectivity = 1,
     braking_power = "1kW",
-    burner = {
+    energy_source = {
+      type = "burner",
       fuel_inventory_size = 2,
       smoke =
       {
