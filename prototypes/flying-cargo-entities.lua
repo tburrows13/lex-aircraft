@@ -40,7 +40,7 @@ local flying_cargo = {
           leg = "lex-aircraft-leg",
           mount_position = {0, -1},
           ground_position = {0, -1},
-          blocking_legs = {1},
+          walking_group = 1,
           leg_hit_the_ground_trigger = nil
         },
       },
