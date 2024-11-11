@@ -106,6 +106,7 @@ local flying_gunship = {
     -- braking_force = 1,
     -- stop_trigger_speed = 1,
     weight = 1000,
+    allow_remote_driving = true,
   }
   Aircraft:addRecurrentParams(flying_gunship)
 

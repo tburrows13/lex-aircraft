@@ -99,6 +99,7 @@ local flying_heavyship = {
     -- breaking_speed = 0.15,
     -- rotation_speed = 0.006,
     weight = 5000,
+    allow_remote_driving = true,
   }
   Aircraft:addRecurrentParams(flying_heavyship)
 

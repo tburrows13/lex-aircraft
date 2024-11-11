@@ -105,6 +105,7 @@ local flying_cargo = {
     -- breaking_speed = 0.15,
     -- rotation_speed = 0.006,
     weight = 3000,
+    allow_remote_driving = true,
   }
   Aircraft:addRecurrentParams(flying_cargo)
 
