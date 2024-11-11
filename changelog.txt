@@ -1,0 +1,88 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 03. 06. 2023
+  Bugfixes:
+    - Fixed aircraft having slow speed after being quick-toggled by Spidertron Enhancements
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 02. 08. 2022
+  Changes:
+    - Disabled automatic weapon cycling
+    - Fix deployed aircrafts in AAI Vehicle Deployer
+    - Scientific research packages changed
+    - Fixed bug when setting up realistic weapons Krastorio2
+    - Some balance in HP
+    - Planes cannot be placed in space
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: 06. 04. 2022
+  Changes:
+    - fixes compatibility with Krastorio2
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+Date: 06. 04. 2022
+  Changes:
+    - Added setting to enable logistics
+    - Added weapons on a havyship, heavy machine gun (with Krastorio2)
+    - Added grid setting
+    - Aircraft belong to the corresponding subgroup
+    - Small fixes
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 14. 04. 2022
+  Changes:
+    - Aircraft textures changed
+    - Added texture masks
+    - Increase cannon-shell max range
+    - Added aircraft inventory sizescaling settings
+    - Changed names and descriptions
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 14. 04. 2022
+  Changes:
+    - Added weapons on a havyship, heavy rocket launcher (with Krastorio2)
+    - Added cargo aircraft inventory sizescaling settings
+    - Added cargo aircraft logistics
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 12. 04. 2022
+  Changes:
+    - Support Lex's Aircraft high-res
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 12. 04. 2022
+  Changes:
+    - Added sprite scaling setting
+    - Added setting for aircraft speeds
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 09. 04. 2022
+  Changes:
+    - Add volume control
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 08. 04. 2022
+  Changes:
+    - fixed compatibility AAI Programmable Vehicles
+    - fixed compatibility equipment grid with Krastorio2
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 07. 04. 2022
+  Changes:
+    - Fixed sound when flying an aircraft
+    - Decreased aircraft inertia
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 07. 04. 2022
+  Changes:
+    - Initial mod.
