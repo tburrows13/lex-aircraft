@@ -1,3 +1,5 @@
+local item_sounds = require("__base__.prototypes.item_sounds")
+
 local ICONPATH = "__lex-aircraft__/graphics/icons/"
 local subgroup_aircraft = "transport"
 
@@ -40,6 +42,9 @@ data:extend({
     flags = {},
     subgroup = subgroup_aircraft,
     order = "b[personal-transport]-e[lex-flying-gunship]",
+    inventory_move_sound = item_sounds.vehicle_inventory_move,
+    pick_sound = item_sounds.vehicle_inventory_pickup,
+    drop_sound = item_sounds.vehicle_inventory_move,
     place_result = "lex-flying-gunship",
     stack_size = 1,
   },
@@ -51,6 +56,9 @@ data:extend({
     flags = {},
     subgroup = subgroup_aircraft,
     order = "b[personal-transport]-f[lex-flying-cargo]",
+    inventory_move_sound = item_sounds.vehicle_inventory_move,
+    pick_sound = item_sounds.vehicle_inventory_pickup,
+    drop_sound = item_sounds.vehicle_inventory_move,
     place_result = "lex-flying-cargo",
     stack_size = 1,
   },
@@ -62,6 +70,9 @@ data:extend({
     flags = {},
     subgroup = subgroup_aircraft,
     order = "b[personal-transport]-h[lex-flying-heavyship]",
+    inventory_move_sound = item_sounds.vehicle_inventory_move,
+    pick_sound = item_sounds.vehicle_inventory_pickup,
+    drop_sound = item_sounds.vehicle_inventory_move,
     place_result = "lex-flying-heavyship",
     stack_size = 1,
   },
