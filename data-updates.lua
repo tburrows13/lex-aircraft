@@ -48,8 +48,9 @@ end
 if mods["space-exploration"] then
   table.insert(data.raw.technology["lex-flying-heavyship-ships"].unit.ingredients, {"se-rocket-science-pack", 1})
 else
-  table.insert(data.raw.technology["lex-flying-heavyship-ships"].unit.ingredients, {"utility-science-pack", 1})
-  table.insert(data.raw.technology["lex-flying-heavyship-ships"].unit.ingredients, {"production-science-pack", 1})
+  -- TODO remove utility/production if SE is active?
+  --table.insert(data.raw.technology["lex-flying-heavyship-ships"].unit.ingredients, {"utility-science-pack", 1})
+  --table.insert(data.raw.technology["lex-flying-heavyship-ships"].unit.ingredients, {"production-science-pack", 1})
 end
 
 -- SE

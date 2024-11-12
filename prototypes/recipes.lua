@@ -5,7 +5,7 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      {type="item", name="electric-engine-unit", amount=64},
+      {type="item", name="electric-engine-unit", amount=60},
       {type="item", name="steel-plate", amount=200},
       {type="item", name="iron-plate", amount=400},
       {type="item", name="electronic-circuit",amount=40},
@@ -21,7 +21,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      {type="item", name="electric-engine-unit", amount=128},
+      {type="item", name="electric-engine-unit", amount=120},
       {type="item", name="steel-plate", amount=500},
       {type="item", name="iron-plate", amount=500},
       {type="item", name="advanced-circuit", amount=20},
