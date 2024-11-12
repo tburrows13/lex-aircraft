@@ -1,9 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: 12. 11. 2024
+  Features:
+    - Space Age integration for recipes and techs
+    - Added railgun to heavy aircraft when Space Age is enabled
+  Bugfixes:
+    - Fixed cargo aircraft having visible spidertron leg
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 11. 11. 2024
   Features:
     - Factorio 2.0 compatibility
-    - Space Age integration coming later
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 03. 06. 2023
