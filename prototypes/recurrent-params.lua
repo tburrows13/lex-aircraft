@@ -26,7 +26,7 @@ function _Aircrafts:addLeg()
     friction = 1,
     localised_name = { "entity-name.spidertron-leg" },
     collision_box = nil,
-    --collision_mask = {},
+    collision_mask = {layers = {}},
     selection_box = { { -0, -0 }, { 0, 0 } },
     icon = "__base__/graphics/icons/spidertron.png",
     icon_size = 64,

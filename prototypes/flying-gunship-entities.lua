@@ -25,13 +25,6 @@ local flying_gunship = {
       Aircraft:addResist("explosion", 8, 30),
       Aircraft:addResist("acid",     60, 20),
     },
-    collision_mask = {
-      layers = {
-        ground_tile = true,
-        object = true,
-        train = true,
-      }
-    },
     inventory_size = inventorySize,
     guns = {"lex-machine-gun","lex-rocket-launcher"},
     graphics_set = {
