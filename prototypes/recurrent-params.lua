@@ -190,7 +190,7 @@ end
 function _Aircrafts:addRecurrentParams(entitie)
 
   entitie.icon_size = 64
-  entitie.flags = { "placeable-neutral", "player-creation", "placeable-off-grid" }
+  entitie.flags = { "placeable-neutral", "player-creation", "placeable-off-grid", "no-automated-item-removal", "no-automated-item-insertion" }
   entitie.dying_explosion = "medium-explosion"
   entitie.terrain_friction_modifier = 0
   entitie.collision_box = { { -1.5, -1.5 }, { 1.5, 1.5 } }
