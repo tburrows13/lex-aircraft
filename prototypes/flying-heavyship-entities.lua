@@ -28,8 +28,8 @@ local flying_heavyship = {
     inventory_size = inventorySize,
     guns = {"lex-medium-rocket-launcher","lex-cannon"},
     graphics_set = {
-      animation = Aircraft:airplaneAnimation("flying_heavyship", 1.4*scaleSettings),
-      shadow_animation = Aircraft:airshipShadowAnimation("flying_heavyship", 1.4*scaleSettings),
+      animation = Aircraft:airplaneAnimation("flying_heavyship", 1*scaleSettings, 700),
+      shadow_animation = Aircraft:airshipShadowAnimation("flying_heavyship", 1*scaleSettings, 700),
       light = { Aircraft:lightdef(0, -600, 8) },
     },
     spider_engine =
@@ -46,7 +46,8 @@ local flying_heavyship = {
       },
     },
     height = 2,
-    torso_rotation_speed = 0.005,
+    torso_rotation_speed = 0.003,
+    torso_bob_speed = 0.1,
     chunk_exploration_radius = 3,
     movement_energy_consumption = "1950kW",
     automatic_weapon_cycling = false,

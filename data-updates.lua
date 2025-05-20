@@ -75,3 +75,6 @@ if mods["space-exploration"] then
       data_util.collision_description(prototype)  -- Adds "Cannot be placed on..." to tooltip
   end
 end
+
+
+log(serpent.block(data.raw["spider-vehicle"]["lex-flying-gunship"]))

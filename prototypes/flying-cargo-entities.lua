@@ -28,8 +28,8 @@ local flying_cargo = {
     inventory_size = inventorySize,
     guns = {},
     graphics_set = {
-      animation = Aircraft:airplaneAnimation("flying_cargo", 1.6*scaleSettings),
-      shadow_animation = Aircraft:airshipShadowAnimation("flying_cargo", 1.6*scaleSettings),
+      animation = Aircraft:airplaneAnimation("flying_cargo", 1*scaleSettings, 800),
+      shadow_animation = Aircraft:airshipShadowAnimation("flying_cargo", 1*scaleSettings, 800),
       light = { Aircraft:lightdef(0, -600, 8) },
     },
     spider_engine =
@@ -46,7 +46,8 @@ local flying_cargo = {
       },
     },
     height = 2,
-    torso_rotation_speed = 0.005,
+    torso_rotation_speed = 0.002,
+    torso_bob_speed = 0.05,
     chunk_exploration_radius = 3,
     movement_energy_consumption = "2000kW",
     automatic_weapon_cycling = true,

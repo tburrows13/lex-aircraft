@@ -47,9 +47,9 @@ function _Aircrafts:addLeg()
   }
 end
 
-function _Aircrafts:addCommonAnimLines(anim)
+function _Aircrafts:addCommonAnimLines(anim, size)
   for key, layer in pairs(anim.layers) do
-    layer.width, layer.height = HR_VERSION, HR_VERSION
+    layer.width, layer.height = size, size
     layer.frame_count = 1
     layer.direction_count = 128
     layer.line_length = 8
@@ -58,7 +58,7 @@ function _Aircrafts:addCommonAnimLines(anim)
   return anim
 end
 
-function _Aircrafts:airplaneAnimation(name, scale)
+function _Aircrafts:airplaneAnimation(name, scale, size)
   local anim = {}
   anim.layers = {
     {
@@ -76,6 +76,7 @@ function _Aircrafts:airplaneAnimation(name, scale)
       },
       shift = { 0, 0 },
       scale = SPRITE_MULTIPLIER * scale * 0.5,
+      priority = "no-atlas",
     },
     {
       stripes = {
@@ -93,17 +94,18 @@ function _Aircrafts:airplaneAnimation(name, scale)
       apply_runtime_tint = true,
       shift = { 0, 0 },
       scale = SPRITE_MULTIPLIER * scale * 0.5,
+      priority = "no-atlas",
     },
 
 
 
 
   }
-  self:addCommonAnimLines(anim)
+  self:addCommonAnimLines(anim, size)
   return anim
 end
 
-function _Aircrafts:airshipShadowAnimation(name, scale)
+function _Aircrafts:airshipShadowAnimation(name, scale, size)
   local anim = {}
   anim.layers = {
     {
@@ -122,9 +124,10 @@ function _Aircrafts:airshipShadowAnimation(name, scale)
       shift = { 2, 2 },
       draw_as_shadow = true,
       scale = SPRITE_MULTIPLIER * scale * 0.5,
+      priority = "no-atlas",
     }
   }
-  self:addCommonAnimLines(anim)
+  self:addCommonAnimLines(anim, size)
   return anim
 end
 
