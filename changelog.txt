@@ -7,6 +7,7 @@ Date: 21. 05. 2025
     - Unified scale to 0.5 (instead of 0.5, 0.7 and 0.8), using high-res version
     - Adjusted directional light, contrast and color
     - New icons and tech icons
+    - New thumbnail
     - The bobbing of aircrafts is much slower (0.05, 0.1, 0.2 instead of 1.0)
     - The turning of aircrafts is slower
   Changes:

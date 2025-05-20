@@ -4,9 +4,9 @@
   "factorio_version": "2.0",
   "title": "Lex's Aircraft",
   "author": "Lexsus",
-  "contact": "Discord SwiftLex#5249, Xorimuth",
+  "contact": "Discord SwiftLex#5249, xorimuth",
   "description": "Adds 2 combat aircrafts and a transport ship.",
-  "homepage": "",
+  "homepage": "https://github.com/tburrows13/lex-aircraft",
   "dependencies": [
     "base",
     "? space-age",
