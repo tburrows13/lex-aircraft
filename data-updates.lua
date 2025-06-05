@@ -77,4 +77,4 @@ if mods["space-exploration"] then
 end
 
 
-log(serpent.block(data.raw["spider-vehicle"]["lex-flying-gunship"]))
+--log(serpent.block(data.raw["spider-vehicle"]["lex-flying-gunship"]))
