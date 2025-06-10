@@ -124,7 +124,7 @@ function _Aircrafts:airshipShadowAnimation(name, scale, size)
       shift = { 2, 2 },
       draw_as_shadow = true,
       scale = SPRITE_MULTIPLIER * scale * 0.5,
-      priority = "no-atlas",
+      priority = "low",
     }
   }
   self:addCommonAnimLines(anim, size)
