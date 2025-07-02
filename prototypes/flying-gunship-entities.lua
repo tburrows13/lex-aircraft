@@ -28,8 +28,8 @@ local flying_gunship = {
     inventory_size = inventorySize,
     guns = {"lex-machine-gun","lex-rocket-launcher"},
     graphics_set = {
-      animation = Aircraft:airplaneAnimation("flying_gunship", 1*scaleSettings),
-      shadow_animation = Aircraft:airshipShadowAnimation("flying_gunship", 1*scaleSettings),
+      animation = Aircraft:airplaneAnimation("flying_gunship", 1*scaleSettings, 500),
+      shadow_animation = Aircraft:airshipShadowAnimation("flying_gunship", 1*scaleSettings, 500),
       light = { Aircraft:lightdef(0, -600, 8) },
     },
     spider_engine =
@@ -46,7 +46,8 @@ local flying_gunship = {
       },
     },
     height = 2,
-    torso_rotation_speed = 0.01,
+    torso_rotation_speed = 0.005,
+    torso_bob_speed = 0.2,
     chunk_exploration_radius = 3,
     movement_energy_consumption = "750kW",
     automatic_weapon_cycling = false,
@@ -94,10 +95,10 @@ local flying_gunship = {
     -- acceleration_per_energy = 0.025,
     -- breaking_speed = 0.15,
     -- rotation_speed = 0.006,
-    friction_force = 1,
+    friction_force = 0.5,
     -- braking_force = 1,
     -- stop_trigger_speed = 1,
-    weight = 1000,
+    weight = 400,
     allow_remote_driving = true,
   }
   Aircraft:addRecurrentParams(flying_gunship)

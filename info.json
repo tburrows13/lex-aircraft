@@ -1,12 +1,12 @@
 {
   "name": "lex-aircraft",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "factorio_version": "2.0",
   "title": "Lex's Aircraft",
   "author": "Lexsus",
-  "contact": "Discord SwiftLex#5249",
-  "description": "Adds three aircraft. Combat and transport flying ship",
-  "homepage": "",
+  "contact": "Discord SwiftLex#5249, xorimuth",
+  "description": "Adds 2 combat aircrafts and a transport ship.",
+  "homepage": "https://github.com/tburrows13/lex-aircraft",
   "dependencies": [
     "base",
     "? space-age",

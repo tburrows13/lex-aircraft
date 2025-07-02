@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 21. 05. 2025
+  Graphics:
+    - Update by snouz
+    - Restored the older more detailed version of entities
+    - Unified scale to 0.5 (instead of 0.5, 0.7 and 0.8), using high-res version
+    - Adjusted directional light, contrast and color
+    - New icons and tech icons
+    - New thumbnail
+    - The bobbing of aircrafts is much slower (0.05, 0.1, 0.2 instead of 1.0)
+    - The turning of aircrafts is slower
+  Changes:
+    - Small aircraft is faster
+---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 30. 11. 2024
   Bugfixes:
@@ -31,13 +45,11 @@ Date: 02. 08. 2022
     - Fixed bug when setting up realistic weapons Krastorio2
     - Some balance in HP
     - Planes cannot be placed in space
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.9
 Date: 06. 04. 2022
   Changes:
     - fixes compatibility with Krastorio2
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.8
 Date: 06. 04. 2022
@@ -47,7 +59,6 @@ Date: 06. 04. 2022
     - Added grid setting
     - Aircraft belong to the corresponding subgroup
     - Small fixes
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
 Date: 14. 04. 2022
@@ -57,7 +68,6 @@ Date: 14. 04. 2022
     - Increase cannon-shell max range
     - Added aircraft inventory sizescaling settings
     - Changed names and descriptions
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.6
 Date: 14. 04. 2022
@@ -65,40 +75,34 @@ Date: 14. 04. 2022
     - Added weapons on a havyship, heavy rocket launcher (with Krastorio2)
     - Added cargo aircraft inventory sizescaling settings
     - Added cargo aircraft logistics
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 12. 04. 2022
   Changes:
     - Support Lex's Aircraft high-res
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 12. 04. 2022
   Changes:
     - Added sprite scaling setting
     - Added setting for aircraft speeds
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 09. 04. 2022
   Changes:
     - Add volume control
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 08. 04. 2022
   Changes:
     - fixed compatibility AAI Programmable Vehicles
     - fixed compatibility equipment grid with Krastorio2
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 07. 04. 2022
   Changes:
     - Fixed sound when flying an aircraft
     - Decreased aircraft inertia
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 07. 04. 2022

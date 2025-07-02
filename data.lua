@@ -1,8 +1,9 @@
 lex_aircraft_high_res = false
 
-if mods["lex-aircraft-high-res"]then
-    lex_aircraft_high_res = true
-end
+--snouz: made all aircrafts the same 0.5 scale
+--if mods["lex-aircraft-high-res"]then
+--    lex_aircraft_high_res = true
+--end
 
 
 require("prototypes.flying-cargo-entities")
