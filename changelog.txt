@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.0
-Date: 21. 05. 2025
+Date: 09. 07. 2025
   Graphics:
     - Update by snouz
     - Restored the older more detailed version of entities
