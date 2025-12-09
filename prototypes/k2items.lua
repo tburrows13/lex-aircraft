@@ -16,7 +16,7 @@ local advanced_machine_gun_sounds = {
   }
 }
 
-if mods["Krastorio2"] and settings.startup["kr-more-realistic-weapon"].value then
+if mods["Krastorio2"] and settings.startup["kr-realistic-weapons"].value then
   data:extend({
     {
       type = "gun",
@@ -28,7 +28,7 @@ if mods["Krastorio2"] and settings.startup["kr-more-realistic-weapon"].value the
       order = "z[tank]-a[advanced-machine-gun]",
       attack_parameters = {
         type = "projectile",
-        ammo_category = "anti-material-rifle-ammo",
+        ammo_category = "kr-anti-materiel-rifle-ammo",
         damage_modifier = 1.5,
         cooldown = 15,
         min_range = 3.5,

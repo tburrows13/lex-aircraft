@@ -1,39 +1,31 @@
 -- K2
 if mods["Krastorio2"] then
   require("prototypes.k2items")
-  data.raw["spider-vehicle"]["lex-flying-cargo"].energy_source.fuel_categories = { "vehicle-fuel" }
-  data.raw["spider-vehicle"]["lex-flying-gunship"].energy_source.fuel_categories = { "vehicle-fuel" }
-  data.raw["spider-vehicle"]["lex-flying-heavyship"].energy_source.fuel_categories = { "vehicle-fuel" }
+  data.raw["spider-vehicle"]["lex-flying-cargo"].energy_source.fuel_categories = { "kr-vehicle-fuel" }
+  data.raw["spider-vehicle"]["lex-flying-gunship"].energy_source.fuel_categories = { "kr-vehicle-fuel" }
+  data.raw["spider-vehicle"]["lex-flying-heavyship"].energy_source.fuel_categories = { "kr-vehicle-fuel" }
   data.raw["equipment-grid"]["lex-flying-cargo-grid"].equipment_categories = {
-    "universal-equipment",
-    "robot-interaction-equipment",
-    "vehicle-robot-interaction-equipment",
-    "vehicle-equipment",
-    "vehicle-motor",
+    "kr-vehicle",
+    "kr-vehicle-motor",
+    "kr-vehicle-roboport",
   }
   data.raw["equipment-grid"]["lex-flying-gunship-grid"].equipment_categories = {
-    "universal-equipment",
-    "robot-interaction-equipment",
-    "vehicle-robot-interaction-equipment",
-    "vehicle-equipment",
-    "vehicle-motor",
+    "kr-vehicle",
+    "kr-vehicle-motor",
+    "kr-vehicle-roboport",
   }
   data.raw["equipment-grid"]["lex-flying-heavyship-grid"].equipment_categories = {
-    "universal-equipment",
-    "robot-interaction-equipment",
-    "vehicle-robot-interaction-equipment",
-    "vehicle-equipment",
-    "vehicle-motor",
+    "kr-vehicle",
+    "kr-vehicle-motor",
+    "kr-vehicle-roboport",
   }
   data.raw["equipment-grid"]["lex-flying-heavyship-grid"].equipment_categories = {
-    "universal-equipment",
-    "robot-interaction-equipment",
-    "vehicle-robot-interaction-equipment",
-    "vehicle-equipment",
-    "vehicle-motor",
+    "kr-vehicle",
+    "kr-vehicle-motor",
+    "kr-vehicle-roboport",
   }
-  table.insert(data.raw["spider-vehicle"]["lex-flying-heavyship"].guns, "heavy-rocket-launcher")
-  if settings.startup["kr-more-realistic-weapon"].value then
+  table.insert(data.raw["spider-vehicle"]["lex-flying-heavyship"].guns, "kr-heavy-rocket-launcher")
+  if settings.startup["kr-realistic-weapons"].value then
     table.insert(data.raw["spider-vehicle"]["lex-flying-heavyship"].guns, "lex-advanced-machine-gun")
   end
 
