@@ -52,7 +52,7 @@ function Aircraft:get_speed_sticker(name)
     force = self.entity.force,
     position = self.entity.position
   }
-  self.speed_sticker.active = false
+  self.speed_sticker.disabled_by_script = true
   return self.speed_sticker
 end
 
