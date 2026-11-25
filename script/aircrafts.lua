@@ -7,7 +7,7 @@ Aircraft.metatable = { __index = Aircraft }
 local function get_speed_boost(burner)
   local burning = burner.currently_burning
   if not burning then return 1 end
-  return burning.fuel_top_speed_multiplier
+  return burning.name.fuel_top_speed_multiplier
 end
 
 function Aircraft.new(entity, sticker_name)
